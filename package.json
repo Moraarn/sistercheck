@@ -1,0 +1,30 @@
+{
+  "name": "sistercheck-monorepo",
+  "version": "1.0.0",
+  "description": "SisterCheck - A comprehensive healthcare application with Flutter frontend, Node.js API, and Python ML backend",
+  "private": true,
+  "workspaces": [
+    "apps/api"
+  ],
+  "scripts": {
+    "dev:api": "cd apps/api && npm run dev",
+    "dev:python": "cd apps/python && python api_server.py",
+    "build:api": "cd apps/api && npm run build",
+    "install:all": "npm install && cd apps/api && npm install",
+    "test:api": "cd apps/api && npm test",
+    "start:all": "concurrently \"npm run dev:api\" \"npm run dev:python\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "healthcare",
+    "flutter",
+    "nodejs",
+    "python",
+    "machine-learning",
+    "risk-assessment"
+  ],
+  "author": "SisterCheck Team",
+  "license": "MIT"
+} 

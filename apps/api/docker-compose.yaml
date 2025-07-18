@@ -1,0 +1,7 @@
+version: "3"
+services:
+  users-app:
+    image: backend-image
+    ports:
+      - "5000:5000"
+    restart: always

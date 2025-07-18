@@ -1,0 +1,30 @@
+pipeline {
+    agent any 
+    
+    stages{
+        stage("Clone Code"){
+            steps {
+                echo "Cloning the code"
+                git url:"https://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@github.com/SierreTechnologies/article-apis.git", branch: "main"
+            }
+        }
+        stage("Build"){
+            steps {
+                echo "Building the image"
+                sh "docker build -t backend-image ."
+            }
+        }
+        stage("Deploy"){
+            steps {
+                echo "Deploying the container"
+                sh "docker compose down && docker compose up -d"
+            }
+        }
+    }
+    post {
+        always {
+            echo "Cleaning up dangling images"
+            sh "docker image prune -f"
+        }
+    }
+}

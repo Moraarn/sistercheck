@@ -1,0 +1,5 @@
+{
+  "error": "415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.",
+  "success": false,
+  "timestamp": "2025-06-24T02:39:52.629282"
+}

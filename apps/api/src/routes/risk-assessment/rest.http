@@ -1,0 +1,24 @@
+@hostname = http://localhost:5000
+
+### Create a new risk assessment
+POST {{hostname}}/risk-assessment
+Content-Type: application/json
+
+{
+    "answers": {
+        "bloating": true,
+        "pelvicPain": false,
+        "irregularPeriods": true,
+        "mood": "stressed",
+        "exercise": "light"
+    }
+}
+
+### Get user's latest risk assessment
+GET {{hostname}}/risk-assessment/latest
+
+### Get all risk assessments for current user
+GET {{hostname}}/risk-assessment
+
+### Get specific risk assessment by ID
+GET {{hostname}}/risk-assessment/64f8a1b2c3d4e5f6a7b8c9d0 

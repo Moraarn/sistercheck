@@ -1,0 +1,98 @@
+Patient ID,Age,Menopause Stage,SI Cyst Size cm,Cyst Growth,fca 125 Level,Ultrasound Fe,Reported Sym,Recommended,Date of Exam,Region
+OC-1001,52,Post-menopausi,7.9,0.84,111,Septated cyst,Bloating,Medication,2025-04-27,Loitoktok
+OC-1002,62,Post-menopausi,5.5,1.11,118,Simple cyst,Pelvic Pain,Medication,2025-04-16,Eldoret
+OC-1003,64,Post-menopausi,5.5,1.1,116,Solid mass,"Nausea, Irregu",Medication,2025-03-11,Loitoktok
+OC-1004,34,Pre-menopausi,2.9,-0.27,113,Hemorrhagic c,"Fatigue, Bleedi",Surgery,2025-03-24,Nairobi
+OC-1005,51,Post-menopausi,4.7,1.42,144,Complex cyst,"Fatigue, Bloati",Surgery,2025-08-09,Mombasa
+OC-1006,65,Post-menopausi,8.1,-0.17,97,Simple cyst,Fatigue,Observation,2025-03-23,Kakamega
+OC-1007,29,Pre-menopausi,4.1,0.01,37,Solid mass,"Fatigue, Nause",Observation,2025-03-22,Kisumu
+OC-1008,40,Pre-menopausi,8.1,-0.17,113,Septated cyst,"Bloating, Irreg",Surgery,2025-04-27,Kisumu
+OC-1009,22,Pre-menopausi,2.5,0.72,69,Hemorrhagic c,"Fatigue, Pelvic",Medication,2025-05-15,Nairobi
+OC-1010,41,Pre-menopausi,5.9,-0.25,141,Septated cyst,"Bloating, Nause",Medication,2025-06-04,Kisumu
+OC-1011,28,Pre-menopausi,1.8,1.19,65,Septated cyst,Bloating,Medication,2025-04-27,Loitoktok
+OC-1012,22,Post-menopausi,9,-0.1,25,Septated cyst,Pelvic Pain,Bic Referral,2025-05-26,Nairobi
+OC-1013,19,Pre-menopausi,4,-0.01,50,Simple cyst,Irregular perio,Observation,2024-10-02,Kisumu
+OC-1014,44,Pre-menopausi,7.2,-0.25,81,Septated cyst,Irregular perio,Observation,2024-09-16,Eldoret
+OC-1015,22,Post-menopausi,4.6,1.1,139,Hemorrhagic c,"Nausea, Irregul",Medication,2024-11-29,Loitoktok
+OC-1016,36,Pre-menopausi,2.7,1.09,140,Complex cyst,"Irregular perioc",Referral,2024-08-09,Loitoktok
+OC-1017,61,Post-menopausi,5.8,-0.56,80,Septated cyst,Irregular perio,Observation,2024-12-07,Loitoktok
+OC-1020,45,Post-menopausi,9.9,0.46,133,Solid mass,Bloating,Nauss Surgery,2024-07-24,Loitoktok
+OC-1021,29,Pre-menopausi,2.7,1.37,29,Solid mass,Fatigue,Referral,2024-12-07,Loitoktok
+OC-1022,42,Pre-menopausi,5.9,0.93,132,Solid mass,"Bloating, Fatig",Surgery,2025-06-10,Loitoktok
+OC-1023,32,Post-menopausi,9.1,1.15,24,Septated cyst,"Bloating, Fatig",Medication,2025-05-20,Nairobi
+OC-1024,22,Pre-menopausi,6.1,0.72,54,Solid mass,"Pelvic pain, Na",Surgery,2025-06-02,Nairobi
+OC-1025,62,Post-menopausi,3.2,1.15,121,Complex cyst,Irregular perio,Surgery,2025-05-18,Loitoktok
+OC-1026,61,Post-menopausi,4.8,-0.56,122,Hemorrhagic c,"Nausea, Pelvic",Referral,2025-04-11,Mombasa
+OC-1027,55,Post-menopausi,7.5,-0.13,3,Septated cyst,"Pelvic pain, Irr",Observation,2025-01-30,Mombasa
+OC-1028,47,Post-menopausi,4.1,-0.2,1,Solid mass,"Pelvic pain, Na",Observation,2025-04-07,Kisumu
+OC-1029,61,Post-menopausi,5.4,0.24,56,Solid mass,Irregular perio,Surgery,2025-04-07,Loitoktok
+OC-1030,25,Pre-menopausi,8.5,-0.18,98,Septated cyst,Fatigue,Surgery,2024-12-07,Loitoktok
+OC-1031,25,Pre-menopausi,9,0.21,22,Septated cyst,"Bloating, Pelvic",Observation,2024-08-07,Kisumu
+OC-1032,27,Pre-menopausi,6.9,-0.32,10,Hemorrhagic c,Irregular perio,Observation,2024-12-20,Mombasa
+OC-1033,27,Post-menopausi,6.9,-0.33,109,Simple cyst,"Pelvic pain",Observation,2024-08-28,Loitoktok
+OC-1034,16,Pre-menopausi,2.7,1,70,Hemorrhagic c,"Fatigue, Nause",Referral,2024-08-07,Kisumu
+OC-1035,16,Post-menopausi,9.9,-0.41,90,Septated cyst,"Bloating, Fatig",Medication,2025-04-26,Nairobi
+OC-1036,64,Post-menopausi,9.9,0.18,112,Hemorrhagic c,"Nausea, Irregul",Observation,2025-02-14,Loitoktok
+OC-1037,44,Post-menopausi,6.8,0.72,92,Complex cyst,Fatigue,Observation,2025-06-05,Mombasa
+OC-1038,62,Post-menopausi,8.2,-0.43,3,Solid mass,"Nausea, Bloati",Referral,2025-03-03,Kisumu
+OC-1039,64,Post-menopausi,9.9,0.02,91,Hemorrhagic c,"Nausea, Bloati",Referral,2025-01-06,Nairobi
+OC-1040,61,Post-menopausi,7.9,-0.18,80,Hemorrhagic c,"Nausea, Irregul",Medication,2025-04-11,Loitoktok
+OC-1041,60,Pre-menopausi,8,0.97,50,Complex cyst,Irregular perio,Observation,2025-02-14,Loitoktok
+OC-1042,64,Post-menopausi,5.8,-0.28,7,Septated cyst,"Bloating, Fatig",Medication,2025-03-03,Mombasa
+OC-1043,64,Post-menopausi,8,-0.33,127,Complex cyst,"Pelvic Pain, Na",Medication,2024-06-11,Mombasa
+OC-1044,26,Pre-menopausi,4.8,-0.28,45,Solid mass,"Nausea, Irregul",Surgery,2024-08-16,Loitoktok
+OC-1045,63,Post-menopausi,6.2,-0.28,150,Solid mass,"Fatigue, Irregul",Surgery,2024-11-10,Kisumu
+OC-1046,63,Post-menopausi,7.8,0.55,80,Complex cyst,"Nausea, Pelvic",Surgery,2024-10-22,Loitoktok
+OC-1047,63,Pre-menopausi,2.8,-0.26,30,Hemorrhagic c,Fatigue,Referral,2025-03-05,Mombasa
+OC-1048,65,Post-menopausi,2.7,0.26,29,Complex cyst,"Fatigue, Pelvic",Surgery,2025-03-16,Nairobi
+OC-1049,26,Post-menopausi,7.2,-0.18,78,Hemorrhagic c,"Pelvic Pain",Surgery,2025-01-30,Kisumu
+OC-1050,26,Post-menopausi,10,0.45,109,Simple cyst,Nausea,Surgery,2024-10-02,Loitoktok
+OC-1051,61,Pre-menopausi,5.8,-0.18,81,Septated cyst,"Bloating, Fatig",Referral,2024-04-11,Loitoktok
+OC-1052,61,Post-menopausi,5.4,0.24,83,Simple cyst,"Bloating, Irregu",Medication,2024-12-07,Loitoktok
+OC-1053,29,Pre-menopausi,2.7,-0.32,29,Hemorrhagic c,Pelvic Pain,Referral,2024-12-07,Loitoktok
+OC-1054,17,Pre-menopausi,3,-0.04,39,Hemorrhagic c,"Nausea, Pelvic",Medication,2024-09-30,Mombasa
+OC-1055,42,Post-menopausi,4.9,1.15,142,Solid mass,"Fatigue, Nause",Referral,2025-06-10,Nairobi
+OC-1056,27,Post-menopausi,5,0.24,117,Simple cyst,"Pelvic pain, Bic",Referral,2024-10-16,Eldoret
+OC-1057,25,Post-menopausi,3.2,1.28,129,Hemorrhagic c,Irregular perio,Observation,2024-11-01,Nairobi
+OC-1058,55,Post-menopausi,7.5,-0.11,12,Hemorrhagic c,Bloating,Observation,2025-02-13,Loitoktok
+OC-1059,26,Pre-menopausi,3.1,0.03,42,Hemorrhagic c,"Fatigue, Nause",Referral,2025-01-22,Nairobi
+OC-1060,26,Post-menopausi,7.4,-0.18,113,Hemorrhagic c,Fatigue,Surgery,2025-01-25,Kisumu
+OC-1061,24,Post-menopausi,9.8,0.04,103,Septated cyst,Irregular perio,Observation,2024-11-10,Loitoktok
+OC-1062,24,Pre-menopausi,9.5,-0.04,80,Septated cyst,Bloating,Observation,2024-12-11,Nairobi
+OC-1063,24,Post-menopausi,9.7,-0.04,88,Simple cyst,Nausea,Observation,2024-08-28,Nairobi
+OC-1065,24,Post-menopausi,5.8,-0.56,64,Septated cyst,Pelvic Pain,Referral,2024-06-21,Kisumu
+OC-1066,31,Post-menopausi,2.8,1.2,108,Hemorrhagic c,"Nausea, Bloati",Referral,2024-06-03,Mombasa
+OC-1067,61,Post-menopausi,6.4,0.1,100,Simple cyst,Pelvic Pain,Observation,2025-04-11,Loitoktok
+OC-1069,47,Pre-menopausi,4.2,-0.5,52,Simple cyst,Irregular perio,Observation,2025-04-11,Loitoktok
+OC-1070,16,Pre-menopausi,9.8,-0.03,2,Simple cyst,Fatigue,Observation,2024-12-07,Loitoktok
+OC-1071,16,Pre-menopausi,9.8,0.03,29,Septated cyst,Irregular perio,Referral,2024-12-07,Loitoktok
+OC-1072,29,Post-menopausi,2.7,-0.37,30,Hemorrhagic c,Irregular perio,Observation,2024-07-15,Kakamega
+OC-1073,51,Post-menopausi,2.7,1.37,54,Hemorrhagic c,"Irregular perioc",Referral,2024-07-15,Kisumu
+OC-1074,27,Pre-menopausi,6.9,-0.32,10,Hemorrhagic c,"Irregular perioc",Observation,2024-08-28,Kisumu
+OC-1075,29,Pre-menopausi,6.9,-0.32,7,Solid mass,"Fatigue, Bloati",Medication,2025-03-26,Nairobi
+OC-1076,17,Post-menopausi,5.6,-0.65,36,Hemorrhagic c,Bloating,Referral,2024-12-20,Mombasa
+OC-1077,17,Pre-menopausi,5.6,0.65,3,Hemorrhagic c,"Fatigue, Irregul",Surgery,2024-12-20,Kisumu
+OC-1078,17,Pre-menopausi,5.6,0.65,1,Solid mass,"Fatigue, Irregul",Medication,2024-12-20,Mombasa
+OC-1079,32,Pre-menopausi,3.1,1.04,3,Hemorrhagic c,"Irregular perioc",Referral,2024-08-23,Eldoret
+OC-1080,31,Post-menopausi,2.8,1.35,121,Hemorrhagic c,Fatigue,Referral,2024-06-03,Nairobi
+OC-1081,62,Post-menopausi,8.2,-0.15,37,Complex cyst,Bloating,Observation,2025-05-14,Nairobi
+OC-1082,62,Post-menopausi,7.7,0.22,31,Septated cyst,Irregular perio,Surgery,2025-05-14,Loitoktok
+OC-1083,54,Post-menopausi,6,-0.5,122,Complex cyst,"Fatigue, Nause",Medication,2025-10-23,Kisumu
+OC-1084,46,Pre-menopausi,8.8,-0.5,142,Simple cyst,"Fatigue, Irregul",Observation,2024-03-03,Loitoktok
+OC-1085,30,Pre-menopausi,6,-0.43,30,Hemorrhagic c,"Nausea, Bloati",Referral,2024-03-03,Kisumu
+OC-1086,47,Post-menopausi,2.5,-0.6,40,Simple cyst,"Fatigue, Nause",Observation,2024-07-11,Nairobi
+OC-1087,46,Pre-menopausi,4.6,-0.39,137,Solid mass,Irregular perio,Observation,2024-10-21,Nairobi
+OC-1088,32,Post-menopausi,2,-0.25,30,Simple cyst,Bloating,Medication,2025-01-15,Nairobi
+OC-1089,32,Post-menopausi,2,-0.25,30,Simple cyst,Irregular perio,Observation,2025-01-15,Nairobi
+OC-1090,32,Post-menopausi,4.1,1.05,108,Simple cyst,"Fatigue, Pelvic",Observation,2024-08-31,Mombasa
+OC-1091,58,Post-menopausi,9.8,1.3,65,Septated cyst,"Fatigue, Irregul",Medication,2025-05-10,Loitoktok
+OC-1092,58,Post-menopausi,9.8,0.77,65,Septated cyst,"Fatigue, Pelvic",Referral,2025-05-10,Loitoktok
+OC-1093,58,Post-menopausi,9.8,0.39,65,Septated cyst,"Bloating, Fatig",Referral,2025-05-10,Loitoktok
+OC-1095,61,Post-menopausi,7.9,0.2,145,Complex cyst,"Nausea, Pelvic",Surgery,2025-05-30,Nairobi
+OC-1096,25,Post-menopausi,6.9,-0.28,103,Hemorrhagic c,"Pelvic pain, Na",Referral,2024-08-28,Nairobi
+OC-1097,25,Post-menopausi,6.9,0.42,39,Solid mass,"Nausea, Pelvic",Surgery,2024-08-28,Loitoktok
+OC-1098,25,Post-menopausi,6.9,-0.07,39,Simple cyst,"Pelvic pain, Irr",Observation,2024-08-28,Kisumu
+OC-1099,36,Post-menopausi,4,-0.07,88,Complex cyst,Nausea,Surgery,2024-07-10,Nairobi
+OC-1100,36,Post-menopausi,3.8,0.28,88,Simple cyst,Irregular perio,Observation,2024-08-31,Nairobi
+OC-1094,40,Pre-menopausi,3.7,1.28,90,Hemorrhagic c,Nausea,Referral,2024-11-10,Eldoret
+OC-1068,47,Post-menopausi,4,-0.05,52,Simple cyst,Irregular perio,Referral,2025-04-11,Loitoktok 

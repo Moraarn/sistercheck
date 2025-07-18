@@ -1,0 +1,24 @@
+@hostname = http://localhost:5000
+
+### Admin login
+POST {{hostname}}/admins/signin
+Content-Type: application/json
+
+{
+    "email": "admin@example.com",
+    "password": "adminpassword123"
+}
+
+### Get admin profile (requires auth)
+GET {{hostname}}/admins/profile
+Authorization: Bearer <admin-token>
+
+### Update admin profile (requires auth)
+PUT {{hostname}}/admins/profile
+Authorization: Bearer <admin-token>
+Content-Type: application/json
+
+{
+    "username": "updatedadmin",
+    "permissions": ["users:read", "users:write", "articles:manage"]
+} 

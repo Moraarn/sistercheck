@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../sistercheck-api"
+		},
+		{
+			"path": "../../sistercheck-python"
+		}
+	],
+	"settings": {}
+}

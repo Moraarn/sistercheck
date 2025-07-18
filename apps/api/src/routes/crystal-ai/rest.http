@@ -1,0 +1,32 @@
+@hostname = http://localhost:5000
+
+### Send a message to Crystal AI
+POST {{hostname}}/crystal-ai/talk
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+    "message": "What are the symptoms of ovarian cysts?"
+}
+
+### Continue a session
+POST {{hostname}}/crystal-ai/talk
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+    "message": "Can you tell me more about treatment?",
+    "sessionId": "your-session-id-here"
+}
+
+### Get all chat sessions for the user
+GET {{hostname}}/crystal-ai/sessions
+Authorization: Bearer <token>
+
+### Get a session with its messages
+GET {{hostname}}/crystal-ai/sessions/your-session-id-here
+Authorization: Bearer <token>
+
+### Delete a session and its messages
+DELETE {{hostname}}/crystal-ai/sessions/your-session-id-here
+Authorization: Bearer <token> 

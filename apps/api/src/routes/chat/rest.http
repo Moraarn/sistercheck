@@ -1,0 +1,26 @@
+@hostname = http://localhost:5000
+
+### Send a message
+POST {{hostname}}/chat
+Content-Type: application/json
+
+{
+    "receiverId": "64f8a1b2c3d4e5f6a7b8c9d0",
+    "content": "Hello! How can I help you today?",
+    "messageType": "text"
+}
+
+### Get messages between two users
+GET {{hostname}}/chat/64f8a1b2c3d4e5f6a7b8c9d0
+
+### Get user's chat rooms
+GET {{hostname}}/chat/rooms
+
+### Get unread message count
+GET {{hostname}}/chat/unread-count
+
+### Mark messages as read
+PATCH {{hostname}}/chat/64f8a1b2c3d4e5f6a7b8c9d0/read
+
+### Delete a message
+DELETE {{hostname}}/chat/64f8a1b2c3d4e5f6a7b8c9d0 

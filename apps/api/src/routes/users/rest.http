@@ -1,0 +1,107 @@
+@hostname = http://localhost:5000
+
+### Register a new user
+POST {{hostname}}/users/signup
+Content-Type: application/json
+
+{
+    "username": "ruth moraa",
+    "email": "moraarr@gmail.com",
+    "password": "password123",
+    "name": "John Doe",
+    "age": 24,
+    "language": "en",
+    "location": "New York",
+    "role": "user",
+    "referralCode": "45defa1bbfefb4db"
+}
+
+### Register a peer sister
+POST {{hostname}}/users/signup
+Content-Type: application/json
+
+{
+    "username": "sister_sarah",
+    "email": "sarah@example.com",
+    "password": "password123",
+    "name": "Sarah Johnson",
+    "age": 30,
+    "language": "en",
+    "location": "Los Angeles",
+    "role": "peer_sister",
+    "bio": "Experienced peer support specialist"
+}
+
+### Register a nurse
+POST {{hostname}}/users/signup
+Content-Type: application/json
+
+{
+    "username": "nurse_mary",
+    "email": "mary@example.com",
+    "password": "password123",
+    "name": "Mary Smith",
+    "age": 35,
+    "language": "en",
+    "location": "Chicago",
+    "role": "nurse",
+    "bio": "Registered nurse with 10 years experience"
+}
+
+### Login user
+POST {{hostname}}/users/signin
+Content-Type: application/json
+
+{
+    "email": "john.doe@example.com",
+    "password": "password123"
+}
+
+### Get current authenticated user (requires auth)
+GET {{hostname}}/users/account
+
+### Get all users (admin only)
+GET {{hostname}}/users
+
+### Get users by role (admin only)
+GET {{hostname}}/users/role/peer_sister
+
+### Update current user (requires auth)
+PUT {{hostname}}/users
+Content-Type: application/json
+
+{
+    "username": "johndoeupdated",
+    "phone": "+1234567890",
+    "healthPreferences": {
+        "notifications": true,
+        "privacyLevel": "private",
+        "language": "en"
+    },
+    "emergencyContact": {
+        "name": "Jane Doe",
+        "phone": "+1234567891",
+        "relationship": "Sister"
+    }
+}
+
+### Delete current user (requires auth)
+DELETE {{hostname}}/users
+
+### Request password reset
+POST {{hostname}}/users/request-password-reset
+Content-Type: application/json
+
+{
+    "email": "john.doe@example.com"
+}
+
+### Reset password with token
+POST {{hostname}}/users/reset-password
+Content-Type: application/json
+
+{
+    "token": "your-reset-token-here",
+    "newPassword": "newpassword123"
+}
+

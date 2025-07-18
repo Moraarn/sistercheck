@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../codeher"
+		},
+		{
+			"path": "../sistercheck-api"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}

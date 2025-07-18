@@ -1,0 +1,42 @@
+{
+  "title": "Athlete Performance Survey",
+  "description": "Help us understand your training and performance needs",
+  "questions": [
+    {
+      "questionText": "How would you rate your current performance level?",
+      "questionType": "rating",
+      "required": true,
+      "order": 1,
+      "category": "performance",
+      "validationRules": {
+        "minRating": 1,
+        "maxRating": 10
+      }
+    },
+    {
+      "questionText": "What is your primary sport?",
+      "questionType": "multiple_choice",
+      "options": ["Football", "Basketball", "Tennis", "Swimming", "Track & Field", "Other"],
+      "required": true,
+      "order": 2,
+      "category": "performance"
+    },
+    {
+      "questionText": "How many hours do you train per week?",
+      "questionType": "multiple_choice",
+      "options": ["0-5 hours", "6-10 hours", "11-15 hours", "16-20 hours", "20+ hours"],
+      "required": true,
+      "order": 3,
+      "category": "performance"
+    },
+    {
+      "questionText": "What areas would you like to improve?",
+      "questionType": "open_ended",
+      "required": false,
+      "order": 4,
+      "category": "feedback",
+      "helpText": "Please describe specific areas you'd like to focus on"
+    }
+  ],
+  "status": "ongoing"
+} 

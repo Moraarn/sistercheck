@@ -1,0 +1,54 @@
+@hostname = http://localhost:5000
+
+### Create a new symptom entry
+POST {{hostname}}/symptoms
+Content-Type: application/json
+
+{
+    "symptoms": {
+        "bloating": true,
+        "pelvicPain": false,
+        "irregularPeriods": true,
+        "heavyBleeding": false,
+        "fatigue": true,
+        "moodSwings": true,
+        "breastTenderness": false,
+        "backPain": true,
+        "nausea": false,
+        "weightGain": true,
+        "otherSymptoms": "Mild headaches"
+    },
+    "severity": "Moderate",
+    "duration": "3 days",
+    "notes": "Symptoms started after my period ended"
+}
+
+### Get user's latest symptom entry
+GET {{hostname}}/symptoms/latest
+
+### Get all symptoms for current user
+GET {{hostname}}/symptoms
+
+### Get specific symptom by ID
+GET {{hostname}}/symptoms/64f8a1b2c3d4e5f6a7b8c9d0
+
+### Update a symptom entry
+PUT {{hostname}}/symptoms/64f8a1b2c3d4e5f6a7b8c9d0
+Content-Type: application/json
+
+{
+    "severity": "Severe",
+    "notes": "Symptoms have worsened"
+}
+
+### Delete a symptom entry
+DELETE {{hostname}}/symptoms/64f8a1b2c3d4e5f6a7b8c9d0
+
+### Get symptom statistics
+GET {{hostname}}/symptoms/stats
+
+### Get symptoms by severity level
+GET {{hostname}}/symptoms/severity/Moderate
+
+### Get recent symptoms (last 30 days)
+GET {{hostname}}/symptoms/recent 

@@ -1,0 +1,41 @@
+# Core Flask and API dependencies
+Flask>=2.3.0
+Flask-CORS>=4.0.0
+requests>=2.31.0
+
+# Data processing and ML
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+
+# FHIR Integration (using simpler alternatives)
+fhirclient>=3.2.0
+
+# OpenHIE Integration (using standard libraries)
+pydantic>=2.0.0
+xmltodict>=0.13.0
+
+# DHIS2 Integration
+dhis2py==0.1.0
+
+# Security and Authentication
+cryptography>=41.0.0
+PyJWT>=2.8.0
+
+# Logging and Monitoring
+structlog>=23.0.0
+prometheus-client==0.17.1
+
+# Testing
+pytest>=7.4.0
+pytest-flask>=1.2.0
+httpx>=0.24.0
+
+# Development
+black>=23.0.0
+flake8>=6.0.0
+mypy==1.5.1
+
+# Documentation
+sphinx==7.1.2
+sphinx-rtd-theme==1.3.0 
