@@ -23,21 +23,24 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
     {
       'image': 'assets/images/pic1.png',
       'title': 'Welcome to SisterCheck',
-      'subtitle': 'Empowering African women to understand and manage ovarian cysts early.',
+      'subtitle':
+          'Empowering African women to understand and manage ovarian cysts early.',
       'icon': Icons.favorite,
       'color': Colors.pink[100]!,
     },
     {
       'image': 'assets/images/pic2.png',
       'title': 'Know Your Risk',
-      'subtitle': 'Take a quick, private quiz to check your ovarian cyst risk and get personalized advice.',
+      'subtitle':
+          'Take a quick, private quiz to check your ovarian cyst risk and get personalized advice.',
       'icon': Icons.search,
       'color': Colors.purple[100]!,
     },
     {
       'image': 'assets/images/pic3.png',
       'title': 'Support & Community',
-      'subtitle': 'Connect with trusted Sisters, nurses, and learn in your language. Your health, your way.',
+      'subtitle':
+          'Connect with trusted Sisters, nurses, and learn in your language. Your health, your way.',
       'icon': Icons.group,
       'color': Colors.green[100]!,
     },
@@ -53,11 +56,11 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
     _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
       CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
     );
-    _slideAnimation = Tween<Offset>(
-      begin: const Offset(0, 0.3),
-      end: Offset.zero,
-    ).animate(CurvedAnimation(parent: _animationController, curve: Curves.easeOut));
-    
+    _slideAnimation =
+        Tween<Offset>(begin: const Offset(0, 0.3), end: Offset.zero).animate(
+          CurvedAnimation(parent: _animationController, curve: Curves.easeOut),
+        );
+
     _animationController.forward();
   }
 
@@ -101,7 +104,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                   ),
                 ),
                 const SizedBox(height: 16),
-                
+
                 Text(
                   'Choose Your Role',
                   style: TextStyle(
@@ -112,17 +115,14 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 8),
-                
+
                 Text(
                   'How would you like to use SisterCheck?',
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: colors.secondaryText,
-                  ),
+                  style: TextStyle(fontSize: 16, color: colors.secondaryText),
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 24),
-                
+
                 // Doctor/User Option
                 _buildRoleOption(
                   context,
@@ -137,7 +137,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                   colors,
                 ),
                 const SizedBox(height: 12),
-                
+
                 // Patient Option
                 _buildRoleOption(
                   context,
@@ -186,11 +186,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                 color: color,
                 borderRadius: BorderRadius.circular(25),
               ),
-              child: Icon(
-                icon,
-                size: 25,
-                color: colors.primary,
-              ),
+              child: Icon(icon, size: 25, color: colors.primary),
             ),
             const SizedBox(width: 16),
             Expanded(
@@ -208,19 +204,12 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                   const SizedBox(height: 4),
                   Text(
                     description,
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: colors.secondaryText,
-                    ),
+                    style: TextStyle(fontSize: 14, color: colors.secondaryText),
                   ),
                 ],
               ),
             ),
-            Icon(
-              Icons.arrow_forward_ios,
-              color: colors.primary,
-              size: 16,
-            ),
+            Icon(Icons.arrow_forward_ios, color: colors.primary, size: 16),
           ],
         ),
       ),
@@ -229,8 +218,8 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
 
   @override
   Widget build(BuildContext context) {
-    final colors = ref.watch(themeProvider) == ThemeMode.dark 
-        ? AppColors.dark 
+    final colors = ref.watch(themeProvider) == ThemeMode.dark
+        ? AppColors.dark
         : AppColors.light;
 
     return Scaffold(
@@ -259,7 +248,8 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: TextButton(
-                        onPressed: () => Navigator.pushReplacementNamed(context, '/onboarding'),
+                        onPressed: () =>
+                            _showRoleSelectionDialog(context, colors),
                         child: Text(
                           'Skip',
                           style: TextStyle(
@@ -271,7 +261,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                       ),
                     ),
                   ),
-                  
+
                   Expanded(
                     flex: 3,
                     child: PageView.builder(
@@ -308,9 +298,9 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                                   color: colors.primary,
                                 ),
                               ),
-                              
+
                               const SizedBox(height: 40),
-                              
+
                               // Title
                               Text(
                                 page['title']!,
@@ -321,9 +311,9 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                                 ),
                                 textAlign: TextAlign.center,
                               ),
-                              
+
                               const SizedBox(height: 16),
-                              
+
                               // Subtitle
                               Text(
                                 page['subtitle']!,
@@ -334,9 +324,9 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                                   height: 1.5,
                                 ),
                               ),
-                              
+
                               const SizedBox(height: 40),
-                              
+
                               // Image
                               Expanded(
                                 child: Container(
@@ -367,7 +357,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                       },
                     ),
                   ),
-                  
+
                   // Page indicators
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 20),
@@ -381,8 +371,8 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                           width: _currentPage == index ? 24 : 8,
                           height: 8,
                           decoration: BoxDecoration(
-                            color: _currentPage == index 
-                                ? colors.primary 
+                            color: _currentPage == index
+                                ? colors.primary
                                 : colors.border,
                             borderRadius: BorderRadius.circular(4),
                           ),
@@ -390,74 +380,73 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                       ),
                     ),
                   ),
-                  
+
                   // Get Started button
-                  if (_currentPage == pages.length - 1)
-                    Padding(
-                      padding: const EdgeInsets.all(24.0),
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 56,
-                            child: ElevatedButton(
-                              onPressed: () {
-                                _showRoleSelectionDialog(context, colors);
-                              },
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: colors.primary,
-                                foregroundColor: Colors.white,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(16),
-                                ),
-                                elevation: 4,
+                  Padding(
+                    padding: const EdgeInsets.all(24.0),
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          width: double.infinity,
+                          height: 56,
+                          child: ElevatedButton(
+                            onPressed: () {
+                              _showRoleSelectionDialog(context, colors);
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: colors.primary,
+                              foregroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
                               ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'Get Started',
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                              elevation: 4,
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'Get Started',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
                                   ),
-                                  const SizedBox(width: 8),
-                                  Icon(Icons.arrow_forward),
-                                ],
-                              ),
+                                ),
+                                const SizedBox(width: 8),
+                                Icon(Icons.arrow_forward),
+                              ],
                             ),
                           ),
-                          const SizedBox(height: 12),
-                          // Debug button to clear auth data
-                          // SizedBox(
-                          //   width: double.infinity,
-                          //   height: 40,
-                          //   child: TextButton(
-                          //     onPressed: () async {
-                          //       // Clear all stored authentication data
-                          //       final prefs = await SharedPreferences.getInstance();
-                          //       await prefs.clear();
-                          //       ScaffoldMessenger.of(context).showSnackBar(
-                          //         SnackBar(
-                          //           content: Text('Authentication data cleared'),
-                          //           backgroundColor: Colors.green,
-                          //         ),
-                          //       );
-                          //     },
-                          //     child: Text(
-                          //       'Clear Auth Data (Debug)',
-                          //       style: TextStyle(
-                          //         fontSize: 14,
-                          //         color: colors.secondaryText,
-                          //       ),
-                          //     ),
-                          //   ),
-                          // ),
-                        ],
-                      ),
+                        ),
+                        const SizedBox(height: 12),
+                        // Debug button to clear auth data
+                        // SizedBox(
+                        //   width: double.infinity,
+                        //   height: 40,
+                        //   child: TextButton(
+                        //     onPressed: () async {
+                        //       // Clear all stored authentication data
+                        //       final prefs = await SharedPreferences.getInstance();
+                        //       await prefs.clear();
+                        //       ScaffoldMessenger.of(context).showSnackBar(
+                        //         SnackBar(
+                        //           content: Text('Authentication data cleared'),
+                        //           backgroundColor: Colors.green,
+                        //         ),
+                        //       );
+                        //     },
+                        //     child: Text(
+                        //       'Clear Auth Data (Debug)',
+                        //       style: TextStyle(
+                        //         fontSize: 14,
+                        //         color: colors.secondaryText,
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
+                      ],
                     ),
-                  
+                  ),
+
                   const SizedBox(height: 20),
                 ],
               ),
@@ -489,13 +478,10 @@ class SplashScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 8),
-            Image.asset(
-              'assets/images/doctor_illustration.png',
-              height: 120,
-            ),
+            Image.asset('assets/images/doctor_illustration.png', height: 120),
           ],
         ),
       ),
     );
   }
-} 
+}

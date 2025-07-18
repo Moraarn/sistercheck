@@ -1,7 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sistercheck/plugins/network_provider.dart';
 import 'package:sistercheck/plugins/app_provider.dart';
-import '../models/risk_assessment.dart';
 
 class Patient {
   final String id;
