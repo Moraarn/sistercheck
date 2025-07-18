@@ -3,7 +3,6 @@ import { ICrystalMessage, ICrystalSession, MistralAIRequest, MistralAIResponse }
 import { Types } from "mongoose";
 import { AppError } from "../../utils/api.errors";
 import crypto from "crypto";
-import fetch from "node-fetch";
 
 import { MISTRAL_API_KEY, MISTRAL_URL } from "../../config/env";
 
