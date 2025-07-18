@@ -11,10 +11,89 @@ sistercheck/
 │   ├── api/             # Node.js REST API
 │   └── python/          # Python ML backend
 ├── package.json         # Root package.json for monorepo
+├── docker-compose.yml   # Production Docker Compose
+├── docker-compose.dev.yml # Development Docker Compose
+├── docker-scripts.sh    # Docker management script
+├── nginx/               # Nginx configurations
 └── README.md           # This file
 ```
 
-## 🚀 Quick Start
+## 🐳 Docker Quick Start
+
+### Prerequisites
+- Docker and Docker Compose installed
+- Git
+
+### Quick Setup with Docker
+
+1. **Clone and navigate to the project:**
+   ```bash
+   git clone <repository-url>
+   cd sistercheck
+   ```
+
+2. **Build and start all services:**
+   ```bash
+   # Build all Docker images
+   ./docker-scripts.sh build
+   
+   # Start production environment
+   ./docker-scripts.sh start
+   ```
+
+3. **Access the application:**
+   - **Web App**: http://localhost:8080
+   - **API**: http://localhost:5000
+   - **ML API**: http://localhost:5001
+
+### Development Environment
+
+```bash
+# Start development environment with hot reloading
+./docker-scripts.sh start-dev
+
+# View development logs
+./docker-scripts.sh logs-dev
+
+# Stop all services
+./docker-scripts.sh stop
+```
+
+### Docker Management Commands
+
+```bash
+# Build all services
+./docker-scripts.sh build
+
+# Start production environment
+./docker-scripts.sh start
+
+# Start development environment
+./docker-scripts.sh start-dev
+
+# Stop all services
+./docker-scripts.sh stop
+
+# View logs
+./docker-scripts.sh logs [service-name]
+
+# View development logs
+./docker-scripts.sh logs-dev [service-name]
+
+# Check service status
+./docker-scripts.sh status
+
+# Restart a specific service
+./docker-scripts.sh restart <service-name>
+
+# Clean up Docker resources
+./docker-scripts.sh cleanup
+
+# Show help
+./docker-scripts.sh help
+```
+
+## 🚀 Manual Setup (Alternative)
 
 ### Prerequisites
 - Node.js 18+
@@ -92,6 +171,24 @@ cd apps/flutter && flutter run
 - `npm run test:api` - Run API tests
 - `npm run start:all` - Start both API and Python backend
 
+## 🐳 Docker Services
+
+### Production Services
+- **API**: Node.js REST API (Port 5000)
+- **Python ML**: Machine Learning backend (Port 5001)
+- **Flutter Web**: Web application (Port 80)
+- **MongoDB**: Database (Port 27017)
+- **Redis**: Cache (Port 6379)
+- **Nginx**: Reverse proxy (Port 443/8080)
+
+### Development Services
+- **API Dev**: Node.js API with hot reloading
+- **Python ML Dev**: Python backend with debug mode
+- **Flutter Web Dev**: Flutter web with hot reloading
+- **MongoDB Dev**: Development database
+- **Redis Dev**: Development cache
+- **Nginx Dev**: Development reverse proxy
+
 ## 📋 Features
 
 - **Risk Assessment**: AI-powered health risk evaluation
@@ -100,6 +197,48 @@ cd apps/flutter && flutter run
 - **Clinic Finder**: Locate nearby healthcare facilities
 - **Crystal AI**: Advanced AI chat assistance
 - **Analytics**: Comprehensive health data analysis
+
+## 🔒 Security Features
+
+- **HTTPS**: SSL/TLS encryption in production
+- **Rate Limiting**: API request rate limiting
+- **Security Headers**: Comprehensive security headers
+- **Non-root Users**: Containers run as non-root users
+- **Health Checks**: Automated health monitoring
+- **CORS**: Proper CORS configuration
+
+## 🚀 Deployment
+
+### Production Deployment
+```bash
+# Build and start production environment
+./docker-scripts.sh build
+./docker-scripts.sh start
+
+# View logs
+./docker-scripts.sh logs
+
+# Monitor services
+./docker-scripts.sh status
+```
+
+### Environment Variables
+Create `.env` files in each app directory with appropriate configuration:
+
+**API (.env):**
+```
+NODE_ENV=production
+PORT=5000
+MONGODB_URI=mongodb://admin:sistercheck123@mongodb:27017/sistercheck
+JWT_SECRET=your-jwt-secret
+```
+
+**Python (.env):**
+```
+FLASK_ENV=production
+PORT=5001
+MONGODB_URI=mongodb://admin:sistercheck123@mongodb:27017/sistercheck
+```
 
 ## 🤝 Contributing
 

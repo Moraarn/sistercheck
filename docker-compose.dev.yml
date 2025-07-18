@@ -1,0 +1,115 @@
+version: '3.8'
+
+services:
+  # Node.js API Service (Development)
+  api-dev:
+    build:
+      context: ./apps/api
+      dockerfile: Dockerfile
+      target: development
+    container_name: sistercheck-api-dev
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=development
+      - PORT=5000
+    volumes:
+      - ./apps/api:/app
+      - /app/node_modules
+    networks:
+      - sistercheck-dev-network
+    depends_on:
+      - mongodb-dev
+    restart: unless-stopped
+    command: ["npm", "run", "dev"]
+
+  # Python ML Backend Service (Development)
+  python-ml-dev:
+    build:
+      context: ./apps/python
+      dockerfile: Dockerfile
+      target: development
+    container_name: sistercheck-python-ml-dev
+    ports:
+      - "5001:5001"
+    environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+      - PORT=5001
+    volumes:
+      - ./apps/python:/app
+    networks:
+      - sistercheck-dev-network
+    restart: unless-stopped
+    command: ["python", "api_server.py"]
+
+  # Flutter Web App (Development)
+  flutter-web-dev:
+    build:
+      context: ./apps/flutter
+      dockerfile: Dockerfile
+      target: development
+    container_name: sistercheck-flutter-web-dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./apps/flutter:/app
+    networks:
+      - sistercheck-dev-network
+    restart: unless-stopped
+    command: ["flutter", "run", "-d", "web-server", "--web-port", "8080", "--web-hostname", "0.0.0.0", "--hot"]
+
+  # MongoDB Database (Development)
+  mongodb-dev:
+    image: mongo:7.0
+    container_name: sistercheck-mongodb-dev
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=sistercheck123
+      - MONGO_INITDB_DATABASE=sistercheck
+    volumes:
+      - mongodb_dev_data:/data/db
+      - ./mongo-init:/docker-entrypoint-initdb.d:ro
+    networks:
+      - sistercheck-dev-network
+    restart: unless-stopped
+
+  # Redis Cache (Development)
+  redis-dev:
+    image: redis:7-alpine
+    container_name: sistercheck-redis-dev
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_dev_data:/data
+    networks:
+      - sistercheck-dev-network
+    restart: unless-stopped
+
+  # Development Nginx (with hot reloading)
+  nginx-dev:
+    image: nginx:alpine
+    container_name: sistercheck-nginx-dev
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    networks:
+      - sistercheck-dev-network
+    depends_on:
+      - api-dev
+      - python-ml-dev
+      - flutter-web-dev
+    restart: unless-stopped
+
+volumes:
+  mongodb_dev_data:
+    driver: local
+  redis_dev_data:
+    driver: local
+
+networks:
+  sistercheck-dev-network:
+    driver: bridge 
